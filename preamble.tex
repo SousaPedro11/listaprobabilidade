@@ -1,0 +1,58 @@
+\documentclass[a4paper, 11pt]{article} %book, article ou report
+\usepackage[brazil]{babel} %linguagem do documento
+\usepackage[utf8]{inputenc} %reconhece acento e cedilha
+\usepackage{amssymb, amsmath, pxfonts} %permite simbolos matemáticos
+\usepackage{mathrsfs} %permite uso de fontes para conjuntos
+\usepackage[normalem]{ulem} %permite sublinhar palavras
+\usepackage{mathrsfs} %permite o uso de letras trabalhadas
+\usepackage{textcomp}
+\usepackage{enumitem}
+\usepackage{tocloft}
+\renewcommand{\cftsecleader}{\color{red}{\cftdotfill{\cftdotsep}}}
+% \usepackage{array}
+\usepackage{xfrac}
+\usepackage{fancyhdr}
+%\usepackage{times}
+%\renewcommand{\familydefault}{\sfdefault}
+%\usepackage{subfigure}
+\usepackage[top=3cm,left=3cm,right=2cm,bottom=2cm]{geometry} %margens
+\usepackage{setspace}
+\usepackage{graphicx} %permite inserir figuras
+\usepackage{adjustbox}
+\usepackage[usenames,dvipsnames]{color} %permite letras coloridas
+\usepackage{makeidx} %pra criar índice remissivo
+\makeindex %construção do índice
+\usepackage[pdftex,bookmarksnumbered,colorlinks]{hyperref} %hiperlinks coloridos
+\DeclareMathAlphabet {\mathbfit}{OML}{cmm}{b}{it} %negrito e itálico
+\usepackage{indentfirst}
+\usepackage{mathptmx}
+\usepackage{anyfontsize}
+\usepackage{t1enc}
+\usepackage{longtable}
+\usepackage{wrapfig,lipsum,booktabs}
+\usepackage{booktabs,multirow}
+\newcommand{\solv}[1] {{\color{red}{#1}}}
+\newcommand{\obs}[1] {{\sl{\color{blue}{OBS: {#1}}}}}
+\newcommand{\bfit}[1]{\sl{\textbf{#1}}}
+\newcommand{\mai}[1]{\uppercase{#1}}% Maiúsculas
+\newcommand{\mb}[1]{\mai{\textbf{#1}}}% Maiúsculas + Negrito
+\newcommand{\mbi}[1]{\uppercase{\bfit{#1}}}% Maiúsculas + Negrito e Itálico
+\newcommand{\mam}[3]{\multicolumn{#1}{#2}{\mai{#3}}}% Multicolunas + Maiúsculas
+\newcommand{\mbm}[3]{\multicolumn{#1}{#2}{\mbi{#3}}}% Multicolunas + Negrito e Itálico
+
+\DeclareUnicodeCharacter{2212}{-}
+
+\fancypagestyle{cap1}{
+\fancyhead[LE,RO]{\thepage}
+\fancyhead[LO]{\textsl{\rightmark}}
+\fancyhead[RE]{\textsl{1.\hspace{1ex}NÚMEROS\ REAIS\ E\ COORDENADAS\ NA\ RETA}}
+\fancyfoot{}
+}
+
+\fancypagestyle{cap2}{
+\fancyhead[LE,RO]{\thepage}
+\fancyhead[LO]{\textsl{\rightmark}}
+\fancyhead[RE]{\textsl{2.\hspace{1ex}EQUAÇÕES E GRÁFICOS}}
+\fancyfoot{}
+}
+\include{listings}

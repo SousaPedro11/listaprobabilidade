@@ -1,4 +1,4 @@
-\thispagestyle{cap1}
+\pagestyle{cap1}
 \pagenumbering {arabic}
 
 \section*{Variável Aleatória Discreta}
@@ -15,14 +15,13 @@
 		\solv{x: nº de filhos\\
 		\{0,1,2,3\} $\, \to\,$ possíveis valores que x pode assumir.\\$p(0) = 0,3;\ p(1) = 0,4;\ p(2)=0,2;\ p(3)=0,1$
 		
-		\begin{table}[htpb]
-       		 \centering
-		 {\color{red}\begin{tabular}{|c|c|c|c|c|}
-            	 \hline
-           	 $X$            & 0    & 1    & 2     & 3    \\ \hline
-            	 $P(x_{i})$ & 0,3 & 0,4 & 0,2 & 0,1 \\ \hline
-        		 \end{tabular}}
-    		\end{table}
+		\begin{center}
+			\begin{tabular}{|c|c|c|c|c|}
+            	 		\hline
+           	 		$X$            & 0    & 1    & 2     & 3    \\ \hline
+            	 		$P(x_{i})$ & 0,3 & 0,4 & 0,2 & 0,1 \\ \hline
+        		 	\end{tabular}
+    		\end{center}
 		}
 		\obs{Falta o gráfico}
 		
@@ -30,15 +29,13 @@
 		
 		\solv{
 			\begin{equation*}
-				{\hspace{-2cm}E(x) = \sum^{n}_{i=1} x_{i}p(x_{i})};\ Var(x) = \sum^{n}_{i=1} x_{i}^{2}p(x_{i}) - [E(x)]^{2};\ DP = \sqrt{Var(x)}
+				{E(X) = \sum^{n}_{i=1} x_{i}p(x_{i})};\ Var(x) = \sum^{n}_{i=1} x_{i}^{2}p(x_{i}) - [E(X)]^{2};\ DP = \sqrt{Var(X)}
 			\end{equation*}
-						
-			\begin{table}[htpb]
-				\centering
-				{\color{red}
+			
+			\begin{center}
 				\begin{tabular}{cc|c|}
 					\hline
-					\multicolumn{1}{|c|}{$x$}	     & $p(x)$	              	      & $x.p(x)$                   \\ \hline
+					\multicolumn{1}{|c|}{$X$}	     & $p(x_{i})$	              	      & $x_{i}.p(x_{i})$                   \\ \hline
 					\multicolumn{1}{|c|}{0}         & 0,3                          	      & 0                        \\ \hline
 					\multicolumn{1}{|c|}{1}         & 0,4                     	      & 0,4                      \\ \hline
 					\multicolumn{1}{|c|}{2}         & 0,2                      	      & 0,4                      \\ \hline
@@ -48,17 +45,16 @@
 				\hfil
 				\begin{tabular}{cc|c|}
 					\hline
-					\multicolumn{1}{|c|}{$x$}	     & $p(x)$	              	      & $x^{2}.p(x)$                   \\ \hline
+					\multicolumn{1}{|c|}{$X$}	     & $p(x_{i})$	              	      & $x_{i}^{2}.p(x_{i})$                   \\ \hline
 					\multicolumn{1}{|c|}{0}         & 0,3                          	      & 0                        \\ \hline
 					\multicolumn{1}{|c|}{1}         & 0,4                     	      & 0,4                      \\ \hline
 					\multicolumn{1}{|c|}{2}         & 0,2                      	      & 0,8                      \\ \hline
 					\multicolumn{1}{|c|}{3}         & \multicolumn{1}{c|}{0,1} & \multicolumn{1}{c|}{0,9} \\ \hline
 					\multicolumn{1}{|c}{Total}    & \multicolumn{1}{c|}{}       & \multicolumn{1}{c|}{2,1}    \\ \hline
 				\end{tabular}
-				}
-			\end{table}
+			\end{center}
 
-			${\mathbfit{E(x) = 1,1}};\\ Var(x) = 2,1 - (1,1)^{2}\ $$\, \to\,$$\ 2,1 - 1,21 = 0,89$	\\
+			${\mathbfit{E(X) = 1,1}};\\ Var(X) = 2,1 - (1,1)^{2}\ $$\, \to\,$$\ 2,1 - 1,21 = 0,89$	\\
 			${\mathbfit{DP = \sqrt{0,89} \, \to\, 0,9434}}$	
 		}
 		
@@ -67,18 +63,62 @@
 	\solv{}
 
 \item Um indivíduo que possui um seguro de automóvel de uma determinada empresa é selecionado aleatoriamente. Seja $Y$ o número de infrações ao código de trânsito para as quais o indivíduo foi reincidente nos últimos $3$ anos. A função de de probabilidade de $Y$ é:
-    \begin{table}[htpb]
-        \centering
+
+    \begin{center}
         \begin{tabular}{|c|c|c|c|c|}
             \hline
             $Y$      & 0    & 1    & 2    & 3    \\ \hline
             $P(Y=y)$ & 0,60 & 0,25 & 0,10 & 0,05 \\ \hline
         \end{tabular}
-    \end{table}
+    \end{center}
     
     \begin{enumerate}[label=\alph*)]
-		\item Calcule $E(Y)$.
+    		\item Calcule $E(Y)$.
+    		
+			\solv{
+				\begin{equation*}
+					{E(Y) = \sum^{n}_{i=1} y_{i}p(y_{i})}
+				\end{equation*}
+				
+				\begin{center}
+				\begin{tabular}{|l|l|l|}
+					\hline
+					Y        & $p(y_{i})$       & $y_{i}.p(y_{i})$ \\ \hline
+					0        & 0,6              & 0                \\ \hline
+					1        & 0,25             & 0,25             \\ \hline
+					2        & 0,1              & 0,2              \\ \hline
+					3        & 0,05             & 0,15             \\ \hline
+					\multicolumn{2}{|l|}{Total} & 0,6              \\ \hline
+				\end{tabular}
+				\end{center}
+				
+			Logo, $E(Y) = 0,6.$
+			}
+			
 		\item Suponha que um indivíduo com $Y$ infrações reincidentes incorra em uma multa de $U\$ 100Y^{2}$. Calcule o valor esperado da multa.
+		
+		\solv{
+			$v = 100Y^{2}\ \, \to \,\ E(v) = E(100Y^{2})\ \, \to \,\ E(v) = 100.E(Y^{2})$
+			
+			\begin{equation*}
+				{E(Y^{2}) = \sum^{n}_{i=1} y_{i}^{2}.p(y_{i})}
+			\end{equation*}
+				\begin{center}
+				\begin{tabular}{|l|l|l|}
+					\hline
+					Y        & $p(y_{i})$       & $y_{i}.p(y_{i})$ \\ \hline
+					0        & 0,6              & 0                \\ \hline
+					1        & 0,25             & 0,25             \\ \hline
+					2        & 0,1              & 0,4              \\ \hline
+					3        & 0,05             & 0,45             \\ \hline
+					\multicolumn{2}{|l|}{Total} & 1,1             \\ \hline
+				\end{tabular}
+				\end{center}
+				
+		Logo, $E(Y^{2}) = 1,1$.
+		
+		Com isso, $E(v)=100.E(Y^{2})\ \, \to \,\ 100.1,1\ \, \to \,\ 110$.\\Valor esperado: $U\$ 110$.
+		}
 	\end{enumerate}
 
 \setcounter{enumi}{4}

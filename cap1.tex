@@ -13,7 +13,7 @@
 		\item Determine a função de probabilidade e a distribuição acumulada de $X$.
 		
 		\solv{x: nº de filhos\\
-		\{0,1,2,3\} $\, \to\,$ possíveis valores que x pode assumir.\\$p(0) = 0,3;\ p(1) = 0,4;\ p(2)=0,2;\ p(3)=0,1$
+		\{0,1,2,3\} $\, \to\,$ possíveis valores que x pode assumir.\\$p(0) = 0,3;\ p(1) = 0,4;\ p(2)=0,2;\ p3=0,1$
 		
 		\begin{center}
 			\begin{tabular}{|c|c|c|c|c|}
@@ -123,15 +123,81 @@
 
 \setcounter{enumi}{4}
 \item Um dado é lançado duas vezes. Seja $X$ a soma dos resultados. Calcule $E(X)$.
+
+	\solv{
+		$
+		\Omega = \left\{
+		\begin{array}{cccccc}
+			(1,1), & (1,2), & (1,3), & (1,4), & (1,5), & (1,6)   \\
+			(2,1), & (2,2), & (2,3), & (2,4), & (2,5), & (2,6)   \\
+			(3,1), & (3,2), & (3,3), & (3,4), & (3,5), & (3,6)   \\
+			(4,1), & (4,2), & (4,3), & (4,4), & (4,5), & (4,6)   \\
+			(5,1), & (5,2), & (5,3), & (5,4), & (5,5), & (5,6)   \\
+ 			(6,1), & (6,2), & (6,3), & (6,4), & (6,5), & (6,6)
+		\end{array} \right\}
+		$
+		$
+		X = \left\{
+		\begin{array}{cccccc}
+			2, & 3, & 4, & 5, & 6, & 7   \\
+			3, & 4, & 5, & 6, & 7, & 8   \\
+			4, & 5, & 6, & 7, & 8, & 9   \\
+			5, & 6, & 7, & 8, & 9, & 10   \\
+			6, & 7, & 8, & 9, & 10, & 11   \\
+ 			7, & 8, & 9, & 10, & 11, & 12
+		\end{array} \right\}
+		$
+		
+		\begin{center}
+		\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|c|}
+		\hline
+			$X$       & 2             & 3             & 4             & 5             & 6             & 7             & 8             & 9             & 10            & 11            & 12            \\ \hline
+			$p(x_{i})$ & $\sfrac{1}{36}$ & $\sfrac{2}{36}$ & $\sfrac{3}{36}$ & $\sfrac{4}{36}$ & $\sfrac{5}{36}$ & $\sfrac{6}{36}$ & $\sfrac{5}{36}$ & $\sfrac{4}{36}$ & $\sfrac{3}{36}$ & $\sfrac{2}{36}$ & $\sfrac{1}{36}$ \\ \hline
+			$x_{i}.p(x_{i})$ & $\sfrac{2}{36}$ & $\sfrac{6}{36}$ & $\sfrac{12}{36}$ & $\sfrac{20}{36}$ & $\sfrac{30}{36}$ & $\sfrac{42}{36}$ & $\sfrac{40}{36}$ & $\sfrac{36}{36}$ & $\sfrac{30}{36}$ & $\sfrac{22}{36}$ & $\sfrac{12}{36}$ \\ \hline
+		\end{tabular}
+		\end{center}
+		
+		\begin{equation*}
+			{E(X) = \sum^{n}_{i=1} x_{i}.p(x_{i})}
+		\end{equation*}
+		$E(X) = \dfrac{2}{36} + \dfrac{6}{36} + \dfrac{12}{36} + \ldots + \dfrac{12}{36} = \dfrac{252}{36} = 7$
+	}
 	
 \item Um homem possui $4$ chaves em seu bolso. Como está escuro, ele não consegue ver qual a
 chave correta para abrir a porta de sua casa. Ele testa cada uma das chaves até encontrar a
 correta.
 
+	\solv{
+		$C$ - chave da porta.\\$E_{1},E_{2}$ e $E_{3}$ - outras chaves.
+	}
+	
 	\begin{enumerate}[label=\alph*)]
 		\item Defina um espaço amostral para esse experimento.
-		\item Defina a v.a. $X$ = número de chaves experimentadas até conseguir abrir a porta (inclusive a chave correta). 
-		Quais são os valores de $X$? Qual é a função de probabilidade de $X$?
+		
+		\solv{
+			$\Omega = \left\{
+			\begin{array}{cccccccc}
+				C,& E_{1}C,& E_{2}C,& E_{3}C,& E_{1}E_{2}C,& E_{2}E_{1}C,& E_{1}E_{3}C,& E_{3}E_{1}C \\
+				E_{2}E_{3}C,& E_{3}E_{2}C,& E_{1}E_{2}E_{3}C,& E_{1}E_{3}E_{2}C,& E_{2}E_{1}E_{3}C,& E_{2}E_{3}E_{1}C,& E_{3}E_{1}E_{2}C,& E_{3}E_{2}E_{1}C
+			\end{array}
+			\right\}
+		$
+		}
+		\item Defina a v.a. $X$ = número de chaves experimentadas até conseguir abrir a porta (inclusive a chave correta). Quais são os valores de $X$? Qual é a função de probabilidade de $X$?
+		
+		\solv{
+			$\Omega$(em nº de tentativas) = $\left\{ 1,\ 2,\ 2,\ 2,\ 3,\ 3,\ 3,\ 3,\ 3,\ 3,\ 4,\ 4,\ 4,\ 4,\ 4,\ 4,\ 4,\ 4 \right\}$
+			
+			A partir de $\Omega$, podemos ver que $X = \{1,\ 2,\ 3,\ 4\}$.
+			
+			$p(1) = \dfrac{1}{4}$
+			
+			$p(2) = p( E_{1}C\ U\ E_{2}C\ U\ E_{3}C) \, \to\, \dfrac{1}{4}.\dfrac{1}{3} + \dfrac{1}{4}.\dfrac{1}{3} + \dfrac{1}{4}.\dfrac{1}{3} \, \to\, 3.\dfrac{1}{12} \, \to\, \dfrac{1}{4}$
+			
+			$p(3) = p(E_{1}E_{2}C\ U\ E_{2}E_{1}C\ U\ E_{1}E_{3}C\ U\ E_{3}E_{1}C\ U\ E_{2}E_{3}C\ U\ E_{3}E_{2}C) \, \to\, \dfrac{1}{4}$
+			
+			$p(4) = p()\ \, \to\,\ \dfrac{1}{4}$
+		}
 	\end{enumerate}
 	
 \item Seja uma v.a. $X$ com fdp dada na tabela a seguir:

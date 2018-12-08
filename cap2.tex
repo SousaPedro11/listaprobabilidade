@@ -6,20 +6,60 @@
 \begin{enumerate}
 \item Um atirador acerta na mosca do alvo, $20\%$ dos tiros. Qual a probabilidade de ele acertar na mosca pela primeira vez no $10$\textordmasculine\ tiro?
 
-
-	\solv{}
+	\solv{
+%         $
+%         x = 
+%         \begin{cases}
+%          1 & acerta\\
+%          0 & n\tilde{a}o\ acerta
+%         \end{cases}
+%         $
+        
+%         $p(0) = 0,8 = q;\ p(1) = 0,2 = p$
+%         
+%         \[P(Y = y) = \binom{N}{k} \cdot p^kq^{N-k}\]
+        
+%         $y = N = n$\textordmasculine\ de tentativas $\, \to\, y = 10$.\\
+%         $k= n$\textordmasculine\ de acertos $\, \to\, k = 1$.
+        $p = 0,2;\ x = 10$
+        
+        $P(X = 10) = 0,2^{1}\cdot 0,8^{10-1} \, \to\, (0,2) \cdot (0,8)^{9} \, \to\, (0,2) \cdot (0,8)^{9} \,\to\, 0,0268$
+	}
 
 \item Joga-se um dado equilibrado. Qual é a probabilidade de serem necessários 10 lançamentos até a primeira ocorrência de um seis?
 
-	
+    \solv{
+        $p = \dfrac{1}{6};\ x = 10$
+        
+        $P(X = 10) = \dfrac{1}{6}\cdot\left(\dfrac{5}{6}\right)^{9} \, \to \, 0,0323$
+    }
 
 \item Joga-se um dado equilibrado. Qual é a probabilidade de serem necessários 10 lançamentos até a terceira ocorrência de um seis?
 	
+	\solv{
+        $p = \dfrac{1}{6};\ x = 10;\ k = 3$
+        
+        $\displaystyle \binom{10 - 1}{3 - 1}\cdot\left(\dfrac{1}{6}\right)^3\cdot\left(\dfrac{5}{6}\right)^{7} \, \to\, \dfrac{9!}{2!\cdot7!}\cdot\left(\dfrac{1}{6}\right)^3\cdot\left(\dfrac{5}{6}\right)^{7} \, \to\, \dfrac{\bcancel{9}\cdot\bcancel{8}}{\bcancel{2}\cdot6\cdot\bcancel{36}}\cdot\left(\dfrac{5}{6}\right)^{7} \, \to\, \dfrac{1}{6}\cdot\left(\dfrac{5}{6}\right)^7 \, \to\, 0,0465$
+	}
 \item Um atirador acerta na mosca do alvo, $20\%$ dos tiros. Se ele dá 10 tiros, qual a probabilidade de ele acertar na mosca no máximo 1 vez?
 
-	
+	\solv{
+        $p = 0,2$
+        
+        $P(X\leq1) = P(0) + P(1)$
+        
+        $P(0) = \displaystyle \binom{10}{0}\cdot(0,2)^{0}\cdot(0,8)^{10} \, \to\, \cancelto{1}{\dfrac{10!}{0!\cdot10!}}\cdot\cancelto{1}{(0,2)^{0}}\cdot(0,8)^{10} \, \to\, 0,1074$
+        
+        $P(1) = \displaystyle \binom{9}{1}\cdot(0,2)^{1}\cdot(0,8)^{9} \, \to\, \dfrac{10!}{1!\cdot9!}\cdot(0,2)^{1}\cdot(0,8)^{9} \, \to\, 10\cdot(0,2)\cdot(0,8)^{9} \, \to\, 0,2684$
+        
+        $P(X\leq1) = 0,1074 + 0,2684 \, \to\, 0,3758$
+    }
 	
 \item Entre os 16 programadores de uma empresa, 12 são do sexo masculino. A empresa decide sortear 5 programadores para fazer um curso avançado de programação. Qual é a probabilidade dos 5 sorteados serem do sexo masculino?
+
+    \solv{
+        $P(X = 5) = \dfrac{\displaystyle\binom{12}{5}}{\displaystyle\binom{16}{5}}$
+    }
 
 \item Uma central telefônica recebe uma média de 5 chamadas por minuto. Supondo que as chamadas que chegam constituam uma distribuição de Poisson, qual é a probabilidade de a central não receber nenhuma chamada em um minuto? e de receber no máximo 2 chamadas em 2 mintuos?
 

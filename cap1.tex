@@ -192,32 +192,69 @@ correta.
 			
 			$p(1) = \dfrac{1}{4}$
 			
-			$p(2) = p( E_{1}C\ U\ E_{2}C\ U\ E_{3}C) \, \to\, \dfrac{1}{4}.\dfrac{1}{3} + \dfrac{1}{4}.\dfrac{1}{3} + \dfrac{1}{4}.\dfrac{1}{3} \, \to\, 3.\dfrac{1}{12} \, \to\, \dfrac{1}{4}$
+			$p(2) = p( E_{1}C \cup E_{2}C \cup E_{3}C) \, \to\, \dfrac{1}{4}.\dfrac{1}{3} + \dfrac{1}{4}.\dfrac{1}{3} + \dfrac{1}{4}.\dfrac{1}{3} \, \to\, 3.\dfrac{1}{12} \, \to\, \dfrac{1}{4}$
 			
-			$p(3) = p(E_{1}E_{2}C\ U\ E_{2}E_{1}C\ U\ E_{1}E_{3}C\ U\ E_{3}E_{1}C\ U\ E_{2}E_{3}C\ U\ E_{3}E_{2}C) \, \to\, \dfrac{1}{4}$
+			$p(3) = p(E_{1}E_{2}C \cup E_{2}E_{1}C \cup E_{1}E_{3}C \cup E_{3}E_{1}C \cup E_{2}E_{3}C \cup E_{3}E_{2}C) \, \to\, 6.\left( \dfrac{1}{4} . \dfrac{1}{3} . \dfrac{1}{2} \right) \, \to\, \dfrac{6}{12} \, \to\, \dfrac{1}{4}$
 			
-			$p(4) = p()\ \, \to\,\ \dfrac{1}{4}$
+			$p(4) = p(E_{1}E_{2}E_{3}C \cup E_{1}E_{3}E_{2}C \cup E_{2}E_{1}E_{3}C \cup E_{2}E_{3}E_{1}C \cup E_{3}E_{1}E_{2}C \cup E_{3}E_{2}E_{1}C) \, \to\, 6.\left(\dfrac{1}{4}.\dfrac{1}{3}.\dfrac{1}{2}.\dfrac{1}{1}\right) \, \to\, \dfrac{6}{12} \, \to\, \dfrac{1}{4}$
+			
+			\begin{center}
+			 \begin{tabular}{|c|c|}
+			  \hline
+			  $X$ & $p(x_{i})$\\ \hline
+			  1 & $\sfrac{1}{4}$\\ \hline
+			  2 & $\sfrac{1}{4}$\\ \hline
+			  3 & $\sfrac{1}{4}$\\ \hline
+			  4 & $\sfrac{1}{4}$\\ \hline
+			 \end{tabular}
+			\end{center}
+
 		}
 	\end{enumerate}
 	
 \item Seja uma v.a. $X$ com fdp dada na tabela a seguir:
 
-    \begin{table}[htpb]
-        \centering
+    \begin{center}
+%         \centering
         \begin{tabular}{|c|c|c|c|c|c|c|}
             \hline
             $X$      & 0 & 1       & 2       & 3 & 4 & 5 \\ \hline
             $P(X=x)$ & 0 & $p^{2}$ & $p^{2}$ & p & p & $p^{2}$ \\ \hline
         \end{tabular}
-    \end{table}
+    \end{center}
     
-    	\begin{enumerate}[label=\alph*)]
+    \begin{enumerate}[label=\alph*)]
 		\item Encontre o valor de $p$.
+		
+		\solv{
+            Como $\sum\limits_{i=1}^np(x_{i}) = 1$, temos: $3p^{2} + 2p = 1 \,\to\, 3p^{2} + 2p - 1 = 0$.
+            
+            Resolvendo a equação chegamos as raízes -1 e $\dfrac{1}{3}$. Como a $p$ é a probapilidade de um evento ocorrer, temos $p\geq0$. Logo, $p = \dfrac{1}{3}$.
+		}
+		
 		\item Calcule $P (X \geq 4)$ e $P (X < 3)$.
+		
+		\solv{
+            $P(X\geq4) \, \to\, p^{2} + p \, \to\, \left(\dfrac{1}{3}\right)^{2} + \dfrac{1}{3} \, \to\, \dfrac{1}{9} + \dfrac{1}{3} \, \to\, \dfrac{1 + 3}{9} \, \to\, \dfrac{4}{9}$
+            
+            $P(X<3) \, \to\, 2p^{2} \, \to\, 2.\left(\dfrac{1}{3}\right)^{2} \, \to\, \dfrac{2}{9}$
+		}
+		
 		\item Calcule $P (|X − 3| \geq 2)$.
+		
+		\solv{
+            $\left|x-3\right|\geq2$
+            $
+            \begin{cases}
+                x - 3 \geq\ \ \ 2\hspace*{2ex} \,\to\, & x \geq 5\\
+                x - 3 \leq -2\hspace*{2ex} \,\to\, & x \leq 1
+            \end{cases}
+            $
+            
+            $P(\left|x-3\right|\geq2) = P(X\leq1) + P(X\geq 5) \, \to\, p^{2} + p^{2} \, \to\, 2.p^{2} \, \to\ 2.\left(\dfrac{1}{3}\right)^{2} \, \to\, \dfrac{2}{9}$
+		}
+		
 	\end{enumerate}
-	\solv{}
-
 \end{enumerate}
 
 

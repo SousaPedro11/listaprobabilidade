@@ -1,4 +1,4 @@
-\thispagestyle{cap2}
+\pagestyle{cap2}
 %\pagenumbering {arabic}
 \section*{Modelos de Probabilidade Discretos}
 \addcontentsline{toc}{section}{Modelos de Probabilidade Discretos}
@@ -39,7 +39,9 @@
 	\solv{
         $p = \dfrac{1}{6};\ x = 10;\ k = 3$
         
-        $\displaystyle \binom{10 - 1}{3 - 1}\cdot\left(\dfrac{1}{6}\right)^3\cdot\left(\dfrac{5}{6}\right)^{7} \, \to\, \dfrac{9!}{2!\cdot7!}\cdot\left(\dfrac{1}{6}\right)^3\cdot\left(\dfrac{5}{6}\right)^{7} \, \to\, \dfrac{\bcancel{9}\cdot\bcancel{8}}{\bcancel{2}\cdot6\cdot\bcancel{36}}\cdot\left(\dfrac{5}{6}\right)^{7} \, \to\, \dfrac{1}{6}\cdot\left(\dfrac{5}{6}\right)^7 \, \to\, 0,0465$
+        $P(X = 10) = \displaystyle \binom{10 - 1}{3 - 1}\cdot\left(\dfrac{1}{6}\right)^3\cdot\left(\dfrac{5}{6}\right)^{7} \, \to\, \dfrac{9!}{2!\cdot7!}\cdot\left(\dfrac{1}{6}\right)^3\cdot\left(\dfrac{5}{6}\right)^{7} \, \to\, \dfrac{\bcancel{9}\cdot\bcancel{8}}{\bcancel{2}\cdot6\cdot\bcancel{36}}\cdot\left(\dfrac{5}{6}\right)^{7} \, \to\, \dfrac{1}{6}\cdot\left(\dfrac{5}{6}\right)^7$
+        
+        $P(X=10) = \, \to\, 0,0465$
 	}
 \item Um atirador acerta na mosca do alvo, $20\%$ dos tiros. Se ele dá 10 tiros, qual a probabilidade de ele acertar na mosca no máximo 1 vez?
 
@@ -58,20 +60,55 @@
 \item Entre os 16 programadores de uma empresa, 12 são do sexo masculino. A empresa decide sortear 5 programadores para fazer um curso avançado de programação. Qual é a probabilidade dos 5 sorteados serem do sexo masculino?
 
     \solv{
-        $P(X = 5) = \dfrac{\displaystyle\binom{12}{5}}{\displaystyle\binom{16}{5}}$
+        $P(X = 5) = \dfrac{\displaystyle\binom{12}{5}}{\displaystyle\binom{16}{5}} \, \to\, \dfrac{\dfrac{12!}{\bcancel{5!}\cdot7!}}{\dfrac{16!}{\bcancel{5!}\cdot11!}} \, \to\, \dfrac{12\cdot11\cdot10\cdot9\cdot8}{16\cdot15\cdot14\cdot13\cdot12} \, \to\, \dfrac{11}{14\cdot13}\cdot\dfrac{\bcancel{12}\cdot\bcancel{10}\cdot\cancelto{3}{9}\cdot\bcancel{8}}{\bcancel{16}\cdot\bcancel{15}\cdot\bcancel{12}} \, \to\, \dfrac{11\cdot3}{14\cdot13} \, \to\, \dfrac{33}{182} \, \to\, 0,1813$
     }
 
 \item Uma central telefônica recebe uma média de 5 chamadas por minuto. Supondo que as chamadas que chegam constituam uma distribuição de Poisson, qual é a probabilidade de a central não receber nenhuma chamada em um minuto? e de receber no máximo 2 chamadas em 2 mintuos?
 
+    \solv{
+        \[P(X=x) = \dfrac{\lambda^{x}\cdot e^{-\lambda}}{x!}\]
+        
+        $\lambda = 5$
+        
+        $P(0) = \dfrac{5^{0}\cdot e^{-5}}{0!} \, \to\, \dfrac{1}{e^{5}} \, \to\, 0,0067$
+        
+        $P(X\leq2) = P(0) + P(1) + P(0) \, \to\, \dfrac{10^{2}}{2!\cdot e^{10}} + \dfrac{10}{e^{10}} + \dfrac{1}{e^{10}} \, \to\, \dfrac{122}{2\cdot e^{10}} \, \to\, 0,00277$
+    }
+
 \item Seja $X$ uma v.a. aleatória binomial (n, p) com $n = 5$, $p=\dfrac{1}{3}$. Calcule $E(X^{2})$.
 
+    \solv{
+        \[X \sim BN(n,p);\ E(x) = n\cdot p;\ VAR(X) = n\cdot p\cdot(1 - p)\]
+        
+        $E(X) = 5\cdot\dfrac{1}{3} \, \to\, \dfrac{5}{3}\\VAR(X) = \dfrac{5}{3}\cdot\left(1 - \dfrac{1}{3}\right) \, \to\, \dfrac{10}{9}$
+        
+        \[VAR(X) = E(x^{2}) - [E(X)]^{2} \, \to\, E(x^{2}) = VAR(X) + [E(X)]^{2}\]
+        
+        $E(x^2) = \dfrac{10}{9} + \left(\dfrac{5}{3}\right)^{2} \, \to\, \dfrac{35}{9}$
+    }
+
 \item Em um certo tipo de fabricação de fita magnética, ocorrem cortes a uma taxa de um corte por 2000 pés. Qual é a probabilidade de que um rolo com comprimento de 4000 pés apresente no máximo dois cortes? Pelo menos dois cortes?
+
+    \solv{
+        \[P(X=x) = \dfrac{\lambda^{x}\cdot e^{-\lambda}}{x!}\]
+        
+        $\lambda = 2\ \ p\diagup4000\ p\acute{e}s$
+        
+        $P(X\leq2) = P(2) + P(1) + P(0) \, \to\, \dfrac{2^{2}\cdot e^{-2}}{2!} + \dfrac{2\cdot e^{-2}}{1!} + \dfrac{e^{-2}}{0!} \, \to\, \dfrac{2}{e^{2}} + \dfrac{2}{e^{2}} + \dfrac{1}{e^{2}} \, \to\, 0,676676$
+        
+        $P(X\geq2) = 1 - P(X<2) \, \to\, 1 - [P(0) + P(1)] \, \to\, 1 - \left(\dfrac{2}{e^{2}} + \dfrac{1}{e^{2}}\right) \, \to\, 0,593994$
+    }
 
 \setcounter{enumi}{9}
 \item A probabilidade de uma máquina produzir uma peça defeituosa em um dia é 0,1.
 
 	\begin{enumerate}[label=\alph*)]
 		\item Qual a probabilidade de que, em 20 peças produzidas em um dia, exatamente 5 sejam defeituosas?
+		
+		\solv{
+            $P(X=5) = \displaystyle\binom{20}{5}\cdot(0,1)^{5}\cdot(0,9)^{15}$
+		}
+		
 		\item Qual a probabilidade de que a 10ª peça produzida em um dia seja a primeira defeituosa?
 	\end{enumerate}
 

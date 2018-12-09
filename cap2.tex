@@ -106,16 +106,37 @@
 		\item Qual a probabilidade de que, em 20 peças produzidas em um dia, exatamente 5 sejam defeituosas?
 		
 		\solv{
-            $P(X=5) = \displaystyle\binom{20}{5}\cdot(0,1)^{5}\cdot(0,9)^{15}$
+            $P(X=5) = \displaystyle\binom{20}{5}\cdot(0,1)^{5}\cdot(0,9)^{15} \, \to\, \dfrac{20!}{5!\cdot15!}\cdot(0,1)^{5}\cdot(0,9)^{15} \, \to\, \dfrac{\bcancel{20}\cdot19\cdot\cancelto{3}{18}\cdot17\cdot16\cdot\bcancel{15!}}{\bcancel{5\cdot4}\cdot\bcancel{3\cdot2}\cdot1\cdot\bcancel{15!}}\cdot(0,1)^{5}\cdot(0,9)^{15} \, \to\, 19\cdot17\cdot16\cdot3\cdot(0,1)^{5}\cdot(0,9)^{15} \, \to\, 0,032$
 		}
 		
 		\item Qual a probabilidade de que a 10ª peça produzida em um dia seja a primeira defeituosa?
+		
+		\solv{
+            $P(X=10) = (0,1)\cdot(0,9)^9 \, \to\, 0,0387$
+        }
 	\end{enumerate}
 
 \item Certo curso de treinamento aumenta a produtividade de uma certa população de funcionários em 80\% dos casos. Se 10 funcionários quaisquer participam deste curso, encontre a probabilidade de:
 	\begin{enumerate}[label=\alph*)]
 		\item exatamente 7 funcionários aumentarem a produtividade;
+		
+		\solv{
+            $P(X=7) = \displaystyle\binom{10}{7}\cdot(0,8)^{7}\cdot(0,2)^{3} \, \to\, \dfrac{10\cdot\cancelto{3}{9}\cdot\cancelto{4}{8}\cdot\bcancel{7!}}{\bcancel{7!}\cdot\bcancel{3}\cdot\bcancel{2}\cdot1}\cdot(0,8)^{7}\cdot(0,2)^{3} \, \to\, 120\cdot(0,8)^{7}\cdot(0,2)^{3} \, \to\, 0,201326592$
+        }
 		\item pelo menos 3 funcionários não aumentarem a produtividade;
+		
+        \solv{
+            No máximo 7 aumentaram.
+            
+            $P(X\leq7) = P(X\leq8) - P(X=8) \, \to\, P(X\leq8) - \displaystyle\binom{10}{8}\cdot(0,8)^{8}\cdot(0,2)^{2} \, \to\, P(X\leq8) - \dfrac{\cancelto{5}{10}\cdot9\cdot\bcancel{8!}}{\bcancel{8!}\cdot\bcancel{2!}}\cdot(0,8)^{8}\cdot(0,2)^{2} \, \to\, P(X\leq8) - 45\cdot(0,8)^{8}\cdot(0,2)^{2} \, \to\, 0,6242 - 45\cdot(0,8)^{8}\cdot(0,2)^{2} \, \to\, 0,3222$
+        }
+        
+        \obs{$P(X\leq8)$ é calculado na letra c.}
+        
 		\item não mais que 8 funcionários aumentarem a produtividade.
+		
+		\solv{
+            $P(X\leq8) = 1 - [P(X=9) + P(X=10)] \, \to\, 1 - \left[\displaystyle\binom{10}{9}\cdot(0,8)^{9}\cdot0,2 + \displaystyle\binom{10}{10}\cdot(0,8)^{10}\right]\\ \, \to\, 1-\left[\dfrac{10\cdot\bcancel{9!}}{\bcancel{9!}\cdot1!}\cdot(0,8)^{9}\cdot0,2 + (0,8)^{10}\right] \, \to\, 1 - \left[10\cdot(0,8)^{9}\cdot0,2 + (0,8)^{10}\right] \, \to\, 0,6242$
+		}
 	\end{enumerate}
 \end{enumerate}

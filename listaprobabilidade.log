@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/Arch Linux) (preloaded format=pdflatex 2018.12.3)  9 DEC 2018 08:05
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/Arch Linux) (preloaded format=pdflatex 2018.12.3)  9 DEC 2018 15:55
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1344,23 +1344,23 @@ Overfull \hbox (9.18526pt too wide) in paragraph at lines 125--126
 ) [5]
 \openout2 = `cap3.aux'.
 
- (./cap3.tex) [6
+ (./cap3.tex [6
 
 
-]
+]) [7]
 \openout2 = `cap4.aux'.
 
- (./cap4.tex) [7
+ (./cap4.tex) [8
 
 
 ]
 \openout2 = `bibliografia.aux'.
 
- (./bibliografia.tex [8
+ (./bibliografia.tex) [9
 
 
 
-]) [9]
+]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 17.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 17.
 
@@ -1391,7 +1391,7 @@ l/usyr.pfb></usr/share/texmf-dist/fonts/type1/urw/symbol/usyr.pfb></usr/share/t
 exmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texmf-dist/fonts/type1/u
 rw/times/utmr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></u
 sr/share/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on listaprobabilidade.pdf (12 pages, 462101 bytes).
+Output written on listaprobabilidade.pdf (12 pages, 467019 bytes).
 PDF statistics:
  210 PDF objects out of 1000 (max. 8388607)
  179 compressed objects within 2 object streams

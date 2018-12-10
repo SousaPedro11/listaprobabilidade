@@ -36,16 +36,23 @@
 	
 \item O tempo de vida útil, em anos, de um eletrodoméstico é uma variável aleatória com densidade dada por
 	\begin{equation*}
-		f(x)=\dfrac{xe^{\sfrac{-x}{2}}}{4},\ x>0.
+		f(x)=\dfrac{x\cdot e^{\sfrac{-x}{2}}}{4},\ x>0.
 	\end{equation*}
 	
 	\begin{enumerate}[label=\alph*)]
 		\item Mostre que $f(x)$ integra 1.
 		
 		\solv{
-            $f(x)=\displaystyle\int_{0}^{\infty}\dfrac{xe^{\sfrac{-x}{2}}}{4}\ dx = 1$
+            $F(X)=\displaystyle\int_{0}^{\infty}\dfrac{x\cdot e^{\sfrac{-x}{2}}}{4}\ dx = 1\\ \phantom{F(X)=}\dfrac{1}{4}\cdot\displaystyle\int_{0}^{\infty}x\cdot e^{\sfrac{-x}{2}}\ dx = 1 \, \to\, \left.-\dfrac{1}{2}\cdot e^{\sfrac{-x}{2}}(x+2)\right|_{0}^{\infty} = 1 \, \to\, 0 - (-1) = 1 \, \to\, 1 = 1$
 		}
 		\item Se o fabricante dá um tempo de garantia de seis meses para o produto, qual a proporção de aparelhos que devem usar essa garantia?
+		
+		\solv{
+            Como a vida útil é medida em anos e a garantia é de 6 meses, a garantia é de $\dfrac{1}{2}$ ano.
+            
+            $P(0<X<\sfrac{1}{2}) = \displaystyle\int_{0}^{\sfrac{1}{2}}\dfrac{x\cdot e^{\sfrac{-x}{2}}}{4}\ dx \, \to\, 1 - \dfrac{5}{4\cdot e^{\sfrac{1}{4}}} \, \to\, 0,0265$
+		}
+		
 	\end{enumerate}
 	
 \setcounter{enumi}{3}

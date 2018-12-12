@@ -1,6 +1,0 @@
-\babel@toc {brazil}{}
-\contentsline {section}{Vari\IeC {\'a}vel Aleat\IeC {\'o}ria Discreta}{1}{section*.1}
-\contentsline {section}{Modelos de Probabilidade Discretos}{4}{section*.2}
-\contentsline {section}{Vari\IeC {\'a}vel Aleat\IeC {\'o}ria Cont\IeC {\'\i }nua}{6}{section*.3}
-\contentsline {section}{Modelos de Probabilidade Cont\IeC {\'\i }nuos}{8}{section*.4}
-\contentsline {section}{Refer\IeC {\^e}ncias Bibliogr\IeC {\'a}ficas}{9}{chapter*.5}

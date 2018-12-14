@@ -88,6 +88,16 @@
 
 \item As alturas de 10:000 alunos de um colégio têm distribuição aproximadamente normal, com média $170cm$ e desvio padrão $5cm$. Qual o número esperado de alunos com altura superior a $165cm$?
 
+	\solv{
+		A proporção de alunos com altura superior a 165cm é dada por:
+		
+		$P(X > 165)$, ou $P(Z > (165 − 170)/5) = P(Z >−1) = 0,8413$
+		
+		 Logo, o número de alunos com mais de 165cm é uma variável aleatória com distribuiçãao binomial(10000, 0.8413).
+		 
+		 $X \sim B(10000,\ 0,8413);\ E(X) = n.p \, \to\, 10000.0,8413 \, \to\, 8413$
+	}
+
 \setcounter{enumi}{10}
 \item O saldo médio dos clientes de um banco é uma v.a. normal com média $R\$ 2.000,00$ e desvio padrão $R\$ 250,00$. Os clientes com os 10\% maiores saldos médios recebem tratamento VIP, enquanto aqueles com os 5\% menores saldos médios receberão propaganda extra para estimular maior movimentação da conta.
 	\begin{enumerate}[label=\alph*)]

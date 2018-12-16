@@ -93,7 +93,7 @@
 		
 		$P(X > 165)$, ou $P(Z > (165 − 170)/5) = P(Z >−1) = 0,8413$
 		
-		 Logo, o número de alunos com mais de 165cm é uma variável aleatória com distribuiçãao binomial(10000, 0.8413).
+		 Logo, o número de alunos com mais de 165cm é uma variável aleatória com distribuição binomial(10000, 0.8413).
 		 
 		 $X \sim B(10000,\ 0,8413);\ E(X) = n.p \, \to\, 10000.0,8413 \, \to\, 8413$
 	}
@@ -108,11 +108,11 @@
 		\item Quanto você precisa de saldo médio para se tornar um cliente VIP?
 		
 		\solv{
-            Temos de determinar o valor de $k$ tal que $P(X\geq k) = 0,1$
+            Temos de determinar o valor de $k$ tal que $P(X\geq k) = 0,1$. O que equivale a calcular $90\%$ da distribuição. A área à esquerda de $k$ tem de ser $0,9$. Logo $k > m\acute{e}dia$.
             
             $P(X\geq k) = 0,1 \,\to\, P \left(\dfrac{X - 2000}{250} \geq \dfrac{k - 2000}{250}\right) = 0,1 \, \to\, P \left(\dfrac{X - 2000}{250} \leq \dfrac{k - 2000}{250}\right) = 0,9\\ P \left(Z \leq \dfrac{k - 2000}{250}\right) = 0,9 \, \to\, P(Z\leq0) + P\left(0\leq Z\leq \dfrac{k - 2000}{250}\right) = 0,9\\P\left(0\leq Z\leq \dfrac{k - 2000}{250}\right) = 0,9 - 0,5 \, \to\, 0,4$
             
-            Utilizando a tabela\footnote{\url{http://www.dex.ufla.br/thelmasafadi/tabela\%20normal.pdf}} temos:
+            Utilizando a tabela\footnote[1]{\label{note1}\url{http://www.dex.ufla.br/thelmasafadi/tabela\%20normal.pdf}} temos:
             
             $\dfrac{k-2000}{250} = 1,28 \, \to\, k = 2000 + 320 \, \to\, 2320$
             
@@ -120,5 +120,18 @@
 		}
 		
 		\item Abaixo de qual saldo médio o cliente receberá a propaganda extra?
+		
+		\solv{
+            Nesse caso, para determinar $k$, assumimos $P(X\leq k) = 0,05$. O que equivale a $5\%$ da distribuição. A área à esquerda de $k$ tem de ser $0,05$. Logo, $k < m\acute{e}dia$. Será utilizada a simetria da distribuição, invertendo o sinal da abscissa, para utilizarmos a área na metade direita da função de densidade.
+            
+            $P(X\leq k) = 0,05 \, \to\, P\left(\dfrac{X-2000}{250} \leq \dfrac{k-2000}{250}\right) \, \to\, P\left(Z\geq -\dfrac{k-2000}{250}\right)\\ P\left(Z\geq \dfrac{2000-k}{250}\right) = 0,5 - 0,05 = 0,45$
+            
+            Utilizando a tabela\footref{note1} temos:
+            
+            $\dfrac{2000-k}{250}=1,64 \, \to\, k = 2000 - 410 \, \to\, k = 1590$
+            
+            Logo, os clientes com saldo médio inferior a $R\$1590,00$ receberão a propaganda extra.
+		}
+		
 	\end{enumerate}
 \end{enumerate}

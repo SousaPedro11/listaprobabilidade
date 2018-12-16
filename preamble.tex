@@ -1,4 +1,4 @@
-\documentclass[a4paper, 10pt, oneside]{book} %book, article ou report
+\documentclass[a4paper, 10pt, oneside]{article} %book, article ou report
 \usepackage[brazil]{babel} %linguagem do documento
 \usepackage[utf8]{inputenc} %reconhece acento e cedilha
 \usepackage{amssymb, amsmath, pxfonts} %permite simbolos matemáticos
@@ -45,30 +45,30 @@
 \DeclareUnicodeCharacter{2212}{-}
 
 \fancypagestyle{cap1}{
-\fancyhead[LE,RO]{\thepage}
-\fancyhead[LO]{\textsl{\uppercase{Variável\ Aleatória\ Discreta}}}
-\fancyhead[RE]{\textsl{\uppercase{Variável\ Aleatória\ Discreta}}}
+\fancyhead[R]{\thepage}
+\fancyhead[L]{\textsl{\uppercase{Variável\ Aleatória\ Discreta}}}
+% \fancyhead[RE]{\textsl{\uppercase{Variável\ Aleatória\ Discreta}}}
 \fancyfoot{}
 }
 
 \fancypagestyle{cap2}{
-\fancyhead[LE,RO]{\thepage}
-\fancyhead[LO]{\textsl{\uppercase{Modelos\ de\ Probabilidade\ Discretos}}}
-\fancyhead[RE]{\textsl{\uppercase{Modelos\ de\ Probabilidade\ Discretos}}}
+\fancyhead[R]{\thepage}
+\fancyhead[L]{\textsl{\uppercase{Modelos\ de\ Probabilidade\ Discretos}}}
+% \fancyhead[RE]{\textsl{\uppercase{Modelos\ de\ Probabilidade\ Discretos}}}
 \fancyfoot{}
 }
 
 \fancypagestyle{cap3}{
-\fancyhead[LE,RO]{\thepage}
-\fancyhead[LO]{\textsl{\uppercase{Variável\ Aleatória\ Contínua}}}
-\fancyhead[RE]{\textsl{\uppercase{Variável\ Aleatória\ Contínua}}}
+\fancyhead[R]{\thepage}
+\fancyhead[L]{\textsl{\uppercase{Variável\ Aleatória\ Contínua}}}
+% \fancyhead[RE]{\textsl{\uppercase{Variável\ Aleatória\ Contínua}}}
 \fancyfoot{}
 }
 
 \fancypagestyle{cap4}{
-\fancyhead[LE,RO]{\thepage}
-\fancyhead[LO]{\textsl{\uppercase{Modelos\ de\ Probabilidade\ Contínuos}}}
-\fancyhead[RE]{\textsl{\uppercase{Modelos\ de\ Probabilidade\ Contínuos}}}
+\fancyhead[R]{\thepage}
+\fancyhead[L]{\textsl{\uppercase{Modelos\ de\ Probabilidade\ Contínuos}}}
+% \fancyhead[RE]{\textsl{\uppercase{Modelos\ de\ Probabilidade\ Contínuos}}}
 \fancyfoot{}
 }
 \include{listings}

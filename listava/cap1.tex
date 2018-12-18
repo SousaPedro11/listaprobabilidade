@@ -1,0 +1,276 @@
+\pagestyle{cap1}
+\pagenumbering {arabic}
+
+\section*{Variável Aleatória Discreta}
+\addcontentsline{toc}{section}{Variável Aleatória Discreta}
+
+\begin{enumerate}
+\item Em um determinado condomínio residencial $30\%$ das famílias não tem filhos, $40\%$ tem $1$ filho, $20\%$ tem $2$ filhos e $10\%$ tem $3$ filhos. Seja $X$ o número de filhos de uma família sorteada ao acaso dentro desse condomínio residencial.
+
+\solv{30\% não tem filhos\\40\% tem 1 filho\\20\% tem 2 filhos\\10\% tem 3 filhos}
+
+    \begin{enumerate}[label=\alph*)]
+		\item Determine a função de probabilidade e a distribuição acumulada de $X$.
+		
+		\solv{x: nº de filhos\\
+		\{0,1,2,3\} $\, \to\,$ possíveis valores que x pode assumir.\\$p(0) = 0,3;\ p(1) = 0,4;\ p(2)=0,2;\ p3=0,1$
+		
+		\begin{center}
+			\begin{tabular}{|c|c|c|c|c|}
+            	 		\hline
+           	 		$X$            & 0    & 1    & 2     & 3    \\ \hline
+            	 		$P(x_{i})$ & 0,3 & 0,4 & 0,2 & 0,1 \\ \hline
+        		 	\end{tabular}
+    		\end{center}
+    		
+    		$
+		F(x) = \left\{
+		\begin{array}{cl}
+			0\phantom{.0}, & se\ x<0; \\
+			0.3, & se\ 0 \leq x < 1; \\
+			0.7, & se\ 1 \leq x < 2; \\
+			0.9, & se\ 2 \leq x < 3; \\
+			1\phantom{.0},    & se \ x\geq 3
+		\end{array} \right.
+		$
+		}
+		
+		\item Calcule a esperança e o desvio padrão de $X$.
+		
+		\solv{
+			\begin{equation*}
+				{E(X) = \sum^{n}_{i=1} x_{i}p(x_{i})};\ Var(x) = \sum^{n}_{i=1} x_{i}^{2}p(x_{i}) - [E(X)]^{2};\ DP = \sqrt{Var(X)}
+			\end{equation*}
+			
+			\begin{center}
+				\begin{tabular}{cc|c|}
+					\hline
+					\multicolumn{1}{|c|}{$X$}	     & $p(x_{i})$	              	      & $x_{i}.p(x_{i})$                   \\ \hline
+					\multicolumn{1}{|c|}{0}         & 0,3                          	      & 0                        \\ \hline
+					\multicolumn{1}{|c|}{1}         & 0,4                     	      & 0,4                      \\ \hline
+					\multicolumn{1}{|c|}{2}         & 0,2                      	      & 0,4                      \\ \hline
+					\multicolumn{1}{|c|}{3}         & \multicolumn{1}{c|}{0,1} & \multicolumn{1}{c|}{0,3} \\ \hline
+					\multicolumn{1}{|c}{Total}    & \multicolumn{1}{c|}{}       & \multicolumn{1}{c|}{1,1}    \\ \hline
+				\end{tabular}
+				\hfil
+				\begin{tabular}{cc|c|}
+					\hline
+					\multicolumn{1}{|c|}{$X$}	     & $p(x_{i})$	              	      & $x_{i}^{2}.p(x_{i})$                   \\ \hline
+					\multicolumn{1}{|c|}{0}         & 0,3                          	      & 0                        \\ \hline
+					\multicolumn{1}{|c|}{1}         & 0,4                     	      & 0,4                      \\ \hline
+					\multicolumn{1}{|c|}{2}         & 0,2                      	      & 0,8                      \\ \hline
+					\multicolumn{1}{|c|}{3}         & \multicolumn{1}{c|}{0,1} & \multicolumn{1}{c|}{0,9} \\ \hline
+					\multicolumn{1}{|c}{Total}    & \multicolumn{1}{c|}{}       & \multicolumn{1}{c|}{2,1}    \\ \hline
+				\end{tabular}
+			\end{center}
+
+			${\mathbfit{E(X) = 1,1}};\\ Var(X) = 2,1 - (1,1)^{2}\ $$\, \to\,$$\ 2,1 - 1,21 = 0,89$	\\
+			${\mathbfit{DP = \sqrt{0,89} \, \to\, 0,9434}}$	
+		}
+		
+	\end{enumerate}
+
+	\solv{}
+
+\item Um indivíduo que possui um seguro de automóvel de uma determinada empresa é selecionado aleatoriamente. Seja $Y$ o número de infrações ao código de trânsito para as quais o indivíduo foi reincidente nos últimos $3$ anos. A função de de probabilidade de $Y$ é:
+
+    \begin{center}
+        \begin{tabular}{|c|c|c|c|c|}
+            \hline
+            $Y$      & 0    & 1    & 2    & 3    \\ \hline
+            $P(Y=y)$ & 0,60 & 0,25 & 0,10 & 0,05 \\ \hline
+        \end{tabular}
+    \end{center}
+    
+    \begin{enumerate}[label=\alph*)]
+    		\item Calcule $E(Y)$.
+    		
+			\solv{
+				\begin{equation*}
+					{E(Y) = \sum^{n}_{i=1} y_{i}p(y_{i})}
+				\end{equation*}
+				
+				\begin{center}
+				\begin{tabular}{|l|l|l|}
+					\hline
+					Y        & $p(y_{i})$       & $y_{i}.p(y_{i})$ \\ \hline
+					0        & 0,6              & 0                \\ \hline
+					1        & 0,25             & 0,25             \\ \hline
+					2        & 0,1              & 0,2              \\ \hline
+					3        & 0,05             & 0,15             \\ \hline
+					\multicolumn{2}{|l|}{Total} & 0,6              \\ \hline
+				\end{tabular}
+				\end{center}
+				
+			Logo, $E(Y) = 0,6.$
+			}
+			
+		\item Suponha que um indivíduo com $Y$ infrações reincidentes incorra em uma multa de $U\$ 100Y^{2}$. Calcule o valor esperado da multa.
+		
+		\solv{
+			$v = 100Y^{2}\ \, \to \,\ E(v) = E(100Y^{2})\ \, \to \,\ E(v) = 100.E(Y^{2})$
+			
+			\begin{equation*}
+				{E(Y^{2}) = \sum^{n}_{i=1} y_{i}^{2}.p(y_{i})}
+			\end{equation*}
+				\begin{center}
+				\begin{tabular}{|l|l|l|}
+					\hline
+					Y        & $p(y_{i})$       & $y_{i}.p(y_{i})$ \\ \hline
+					0        & 0,6              & 0                \\ \hline
+					1        & 0,25             & 0,25             \\ \hline
+					2        & 0,1              & 0,4              \\ \hline
+					3        & 0,05             & 0,45             \\ \hline
+					\multicolumn{2}{|l|}{Total} & 1,1             \\ \hline
+				\end{tabular}
+				\end{center}
+				
+		Logo, $E(Y^{2}) = 1,1$.
+		
+		Com isso, $E(v)=100.E(Y^{2})\ \, \to \,\ 100.1,1\ \, \to \,\ 110$.\\Valor esperado: $U\$ 110$.
+		}
+	\end{enumerate}
+
+\setcounter{enumi}{4}
+\item Um dado é lançado duas vezes. Seja $X$ a soma dos resultados. Calcule $E(X)$.
+
+	\solv{
+		$
+		\Omega = \left\{
+		\begin{array}{cccccc}
+			(1,1), & (1,2), & (1,3), & (1,4), & (1,5), & (1,6)   \\
+			(2,1), & (2,2), & (2,3), & (2,4), & (2,5), & (2,6)   \\
+			(3,1), & (3,2), & (3,3), & (3,4), & (3,5), & (3,6)   \\
+			(4,1), & (4,2), & (4,3), & (4,4), & (4,5), & (4,6)   \\
+			(5,1), & (5,2), & (5,3), & (5,4), & (5,5), & (5,6)   \\
+ 			(6,1), & (6,2), & (6,3), & (6,4), & (6,5), & (6,6)
+		\end{array} \right\}
+		$
+		$
+		X = \left\{
+		\begin{array}{cccccc}
+			2, & 3, & 4, & 5, & 6, & 7   \\
+			3, & 4, & 5, & 6, & 7, & 8   \\
+			4, & 5, & 6, & 7, & 8, & 9   \\
+			5, & 6, & 7, & 8, & 9, & 10   \\
+			6, & 7, & 8, & 9, & 10, & 11   \\
+ 			7, & 8, & 9, & 10, & 11, & 12
+		\end{array} \right\}
+		$
+		
+		\begin{center}
+		\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|c|}
+		\hline
+			$X$       & 2             & 3             & 4             & 5             & 6             & 7             & 8             & 9             & 10            & 11            & 12            \\ \hline
+			$p(x_{i})$ & $\sfrac{1}{36}$ & $\sfrac{2}{36}$ & $\sfrac{3}{36}$ & $\sfrac{4}{36}$ & $\sfrac{5}{36}$ & $\sfrac{6}{36}$ & $\sfrac{5}{36}$ & $\sfrac{4}{36}$ & $\sfrac{3}{36}$ & $\sfrac{2}{36}$ & $\sfrac{1}{36}$ \\ \hline
+			$x_{i}.p(x_{i})$ & $\sfrac{2}{36}$ & $\sfrac{6}{36}$ & $\sfrac{12}{36}$ & $\sfrac{20}{36}$ & $\sfrac{30}{36}$ & $\sfrac{42}{36}$ & $\sfrac{40}{36}$ & $\sfrac{36}{36}$ & $\sfrac{30}{36}$ & $\sfrac{22}{36}$ & $\sfrac{12}{36}$ \\ \hline
+		\end{tabular}
+		\end{center}
+		
+		\begin{equation*}
+			{E(X) = \sum^{n}_{i=1} x_{i}.p(x_{i})}
+		\end{equation*}
+		$E(X) = \dfrac{2}{36} + \dfrac{6}{36} + \dfrac{12}{36} + \ldots + \dfrac{12}{36} = \dfrac{252}{36} = 7$
+	}
+	
+\item Um homem possui $4$ chaves em seu bolso. Como está escuro, ele não consegue ver qual a
+chave correta para abrir a porta de sua casa. Ele testa cada uma das chaves até encontrar a
+correta.
+
+	\solv{
+		$C$ - chave da porta.\\$E_{1},E_{2}$ e $E_{3}$ - outras chaves.
+	}
+	
+	\begin{enumerate}[label=\alph*)]
+		\item Defina um espaço amostral para esse experimento.
+		
+		\solv{
+			$\Omega = \left\{
+			\begin{array}{cccccccc}
+				C,& E_{1}C,& E_{2}C,& E_{3}C,& E_{1}E_{2}C,& E_{2}E_{1}C,& E_{1}E_{3}C,& E_{3}E_{1}C \\
+				E_{2}E_{3}C,& E_{3}E_{2}C,& E_{1}E_{2}E_{3}C,& E_{1}E_{3}E_{2}C,& E_{2}E_{1}E_{3}C,& E_{2}E_{3}E_{1}C,& E_{3}E_{1}E_{2}C,& E_{3}E_{2}E_{1}C
+			\end{array}
+			\right\}
+		$
+		}
+		\item Defina a v.a. $X$ = número de chaves experimentadas até conseguir abrir a porta (inclusive a chave correta). Quais são os valores de $X$? Qual é a função de probabilidade de $X$?
+		
+		\solv{
+			$\Omega$(em nº de tentativas) = $\left\{ 1,\ 2,\ 2,\ 2,\ 3,\ 3,\ 3,\ 3,\ 3,\ 3,\ 4,\ 4,\ 4,\ 4,\ 4,\ 4,\ 4,\ 4 \right\}$
+			
+			A partir de $\Omega$, podemos ver que $X = \{1,\ 2,\ 3,\ 4\}$.
+			
+			$p(1) = \dfrac{1}{4}$
+			
+			$p(2) = p( E_{1}C \cup E_{2}C \cup E_{3}C) \, \to\, \dfrac{1}{4}.\dfrac{1}{3} + \dfrac{1}{4}.\dfrac{1}{3} + \dfrac{1}{4}.\dfrac{1}{3} \, \to\, 3.\dfrac{1}{12} \, \to\, \dfrac{1}{4}$
+			
+			$p(3) = p(E_{1}E_{2}C \cup E_{2}E_{1}C \cup E_{1}E_{3}C \cup E_{3}E_{1}C \cup E_{2}E_{3}C \cup E_{3}E_{2}C) \, \to\, 6.\left( \dfrac{1}{4} . \dfrac{1}{3} . \dfrac{1}{2} \right) \, \to\, \dfrac{6}{12} \, \to\, \dfrac{1}{4}$
+			
+			$p(4) = p(E_{1}E_{2}E_{3}C \cup E_{1}E_{3}E_{2}C \cup E_{2}E_{1}E_{3}C \cup E_{2}E_{3}E_{1}C \cup E_{3}E_{1}E_{2}C \cup E_{3}E_{2}E_{1}C) \, \to\, 6.\left(\dfrac{1}{4}.\dfrac{1}{3}.\dfrac{1}{2}.\dfrac{1}{1}\right) \, \to\, \dfrac{6}{12} \, \to\, \dfrac{1}{4}$
+			
+			\begin{center}
+			 \begin{tabular}{|c|c|}
+			  \hline
+			  $X$ & $p(x_{i})$\\ \hline
+			  1 & $\sfrac{1}{4}$\\ \hline
+			  2 & $\sfrac{1}{4}$\\ \hline
+			  3 & $\sfrac{1}{4}$\\ \hline
+			  4 & $\sfrac{1}{4}$\\ \hline
+			 \end{tabular}
+			\end{center}
+
+		}
+	\end{enumerate}
+	
+\item Seja uma v.a. $X$ com fdp dada na tabela a seguir:
+
+    \begin{center}
+%         \centering
+        \begin{tabular}{|c|c|c|c|c|c|c|}
+            \hline
+            $X$      & 0 & 1       & 2       & 3 & 4 & 5 \\ \hline
+            $P(X=x)$ & 0 & $p^{2}$ & $p^{2}$ & p & p & $p^{2}$ \\ \hline
+        \end{tabular}
+    \end{center}
+    
+    \begin{enumerate}[label=\alph*)]
+		\item Encontre o valor de $p$.
+		
+		\solv{
+            Como $\sum\limits_{i=1}^np(x_{i}) = 1$, temos: $3p^{2} + 2p = 1 \,\to\, 3p^{2} + 2p - 1 = 0$.
+            
+            Resolvendo a equação chegamos as raízes -1 e $\dfrac{1}{3}$. Como a $p$ é a probapilidade de um evento ocorrer, temos $p\geq0$. Logo, $p = \dfrac{1}{3}$.
+		}
+		
+		\item Calcule $P (X \geq 4)$ e $P (X < 3)$.
+		
+		\solv{
+            $P(X\geq4) \, \to\, p^{2} + p \, \to\, \left(\dfrac{1}{3}\right)^{2} + \dfrac{1}{3} \, \to\, \dfrac{1}{9} + \dfrac{1}{3} \, \to\, \dfrac{1 + 3}{9} \, \to\, \dfrac{4}{9}$
+            
+            $P(X<3) \, \to\, 2p^{2} \, \to\, 2.\left(\dfrac{1}{3}\right)^{2} \, \to\, \dfrac{2}{9}$
+		}
+		
+		\item Calcule $P (|X − 3| \geq 2)$.
+		
+		\solv{
+            $\left|x-3\right|\geq2$
+            $
+            \begin{cases}
+                x - 3 \geq\ \ \ 2\hspace*{2ex} \,\to\, & x \geq 5\\
+                x - 3 \leq -2\hspace*{2ex} \,\to\, & x \leq 1
+            \end{cases}
+            $
+            
+            $P(\left|x-3\right|\geq2) = P(X\leq1) + P(X\geq 5) \, \to\, p^{2} + p^{2} \, \to\, 2.p^{2} \, \to\ 2.\left(\dfrac{1}{3}\right)^{2} \, \to\, \dfrac{2}{9}$
+		}
+		
+	\end{enumerate}
+\end{enumerate}
+
+
+%\vfill
+%\obs{
+
+%O projeto em java, completo, encontra-se em: \url{https://github.com/SousaPedro11/maxmin_ed2/}
+
+%No repositório há a documentação básica ensinando a baixar e utilizar o projeto.}

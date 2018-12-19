@@ -186,10 +186,58 @@ Uma moeda selecionada aleatoriamente é lançada.
 \item Um agricultor cultiva laranjas e também produz mudas para vender. Após alguns meses a muda pode ser atacada por fungos com probabilidade 0,02 e, nesse caso, ela tem probabilidade 0,5 de ser recuperável. O custo de cada muda produzida é R\$ 1,20, que será acrescido de mais R\$ 0,50 se precisar ser recuperada. As irrecuperáveis são descartadas.
 Sabendo que cada muda é vendida a R\$ 3,50, encontre a distribuição da variável aleatória "lucro por muda produzida".
 
+	\solv{
+		$
+		L=\left\{
+		\begin{array}{cl}
+			3,5 - 1,2 & = \phantom{+}2,3;\ \text{muda sem ataque}\\
+			3,5 - 1,7 & = \phantom{+}1,8;\ \text{muda recuperada}\\
+			0,0 - 1,2 & = -1,2;\ \text{muda irrecuperável}
+		\end{array}
+		\right.
+		$
+		
+		$P(A) = 0,02;\ P(R) = 0,5$
+
+		$P(\overline{A}) = 1 - P(A) = 1 - 0,02 = 0,98$
+				
+		$P(A\cap R) = P(A\cap \overline{R}) = 0,02\times0,5= 0,01$
+		
+		\begin{center}
+		\begin{tabular}{|c|c|c|c|}
+		\hline
+		\em{l} & -1,2 & 1,8 & 2,3\\ \hline
+		P(L= \em{l}) & 0,01 & 0,01 & 0,98\\ \hline
+		\end{tabular}
+		\end{center}
+	}
+
 	\begin{enumerate}[label=\alph*.]
 		\item Qual é o lucro médio por muda produzida?
+		
+			\solv{
+				\[E(l) = \displaystyle\sum^{n}_{i=1} l_{i}p(l_{i})\]
+				
+				$E(l) = -1,2\times0,01 + 1,8\times0,01 + 2,3\times0,98 = 2,26$
+				
+				O lucro médio por muda produzida é de R\$2,26.
+			}
+			
 		\item Em uma plantação de 10000 mudas, qual é o lucro esperado?
+		
+			\solv{
+				$10000\times E(l) = 10000 \times 2,26 = 22600$
+				
+				Para 10000 mudas o lucro esperado é de R\$22600
+			}
+			
 		\item Em um lote de 50 mudas, qual é a probabilidade de que pelo menos 45 sejam aproveitáveis?
+		
+			\solv{
+				Probabilidade de ser aproveitável é a soma das probabilidades de não sofrer ataque e a de sofrer e ser recuperada: $P(\overline{A}) + P(A\cap R) = 0,98+0,01 = 0,99$
+				
+				$X \sim b(50;0,99)$
+			}
 	\end{enumerate}
 
 \item O número de milhas que um determinado carro pode percorrer antes que a bateria se esgote é distribuído exponencialmente com uma média de 10.000 milhas. O proprietário do carro precisa fazer uma viagem de 5000 milhas. Qual é a probabilidade de que ele será capaz de completar a viagem sem ter que substituir a bateria do carro?

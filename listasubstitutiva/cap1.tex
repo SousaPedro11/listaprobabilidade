@@ -236,11 +236,33 @@ Sabendo que cada muda é vendida a R\$ 3,50, encontre a distribuição da variá
 			\solv{
 				Probabilidade de ser aproveitável é a soma das probabilidades de não sofrer ataque e a de sofrer e ser recuperada: $P(\overline{A}) + P(A\cap R) = 0,98+0,01 = 0,99$
 				
-				$X \sim b(50;0,99)$
+				$X \sim b(50;0,99)$, ou seja, a variável aleatória $X$ tem distribuição binomial com parâmetros $n=50$ e $p=0,99$.
+								
+				$P(X\geq45)\footnote{Resolvi com o auxílio do R. Utilizei o comando: dbinom(n,size,prob)} = P(X = 45) + P(X = 46) + P(X = 47) + P(X = 48) + P(X = 49) + P(X = 50)$
+				
+				$\phantom{P(X\geq45)} = 0,0001347924 + 0,001450484 + 0,0122211 + 0,07561804 + 0,3055586 + 0,6050061\\ \phantom{P(X\geq45)}= 0,9999891\cong 1$
+				
+				A probabilidade de que pelo menos 45 sejam aproveitáveis é de praticamente 100\%.
 			}
 	\end{enumerate}
 
 \item O número de milhas que um determinado carro pode percorrer antes que a bateria se esgote é distribuído exponencialmente com uma média de 10.000 milhas. O proprietário do carro precisa fazer uma viagem de 5000 milhas. Qual é a probabilidade de que ele será capaz de completar a viagem sem ter que substituir a bateria do carro?
+
+	\solv{
+		$E(x) = 10000;\ X\sim Ex(10000)$
+	
+		\[F(x) = \left\{
+		\begin{array}{cl}
+			1 - e^{\sfrac{-x}{10000}} &,\ x\geq0\\
+			0 &,\ c.c
+		\end{array}
+		\right.
+		\]
+		
+		$P(X\geq5000) = e^{\sfrac{-5000}{10000}}\, \to\, e^{\sfrac{-1}{2}}\, \to\, \dfrac{1}{\sqrt{e}}\, \to\, 0,60653$
+		
+		A probabilidade de completar a viagem sem substituir a bateria é de $0,60653 (60,65\%)$.
+	}
 
 \end{enumerate}
 
